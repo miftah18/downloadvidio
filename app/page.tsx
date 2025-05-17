@@ -27,7 +27,7 @@ export default function Home() {
     try {
       const response = await axios.post("/api/download", { url })
       setVideoUrl(response.data.play)
-    } catch (err) {
+    } catch  {
       setError("Failed to fetch video. Please check the URL and try again.")
     } finally {
       setLoading(false)
